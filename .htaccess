@@ -1,0 +1,17 @@
+# .htaccess in your /exam_dashboard/api/ directory
+RewriteEngine On
+RewriteBase /exam_dashboard/api/
+
+# Explicitly rewrite /api/dashboard to dashboard.php
+RewriteRule ^dashboard/?$ dashboard.php [L,QSA]
+
+# General rule for resource names (like /subjects)
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
+
+# General rule for resource names with an ID (like /subjects/6)
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/?$ $1.php/$2 [L,QSA]
+
+# Optional: If you have a single entry point for all API requests (less common for file-based API)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php [L] # This would redirect all requests to a single index.php handler
