@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100"> <!-- Added a light gray background to the body for better contrast -->
 
-    <h1>Welcome to the Frontend</h1>
-    <p>This is a simple HTML page.</p>
+    <h1 class="text-3xl font-bold text-center my-8">Welcome to the Frontend</h1> <!-- Styled the main heading -->
+    <p class="text-center mb-8">This is a simple HTML page, now enhanced with Tailwind CSS.</p> <!-- Styled the paragraph -->
 
-    <section id="dashboard-container">
-        <div class="widget">
-          <h3>Metric 1</h3>
+    <section class="border border-gray-300 p-5 mt-5 bg-gray-50 mx-auto max-w-4xl rounded shadow-lg"> <!-- Removed id, Added mx-auto, max-w-4xl, rounded, shadow-lg for better layout -->
+        <div class="border border-gray-200 p-4 mb-3 bg-white shadow-md rounded"> <!-- Removed class="widget", Added rounded -->
+          <h3 class="text-lg font-semibold mb-2">Metric 1</h3>
           <p>Value: <span id="metric1-value">Loading...</span></p>
         </div>
 
-        <div class="widget">
-          <h3>Chart Area</h3>
-          <div id="chart-placeholder" style="height: 200px; background-color: #eee; text-align: center; line-height: 200px;">Chart will be here</div>
+        <div class="border border-gray-200 p-4 mb-3 bg-white shadow-md rounded"> <!-- Removed class="widget", Added rounded -->
+          <h3 class="text-lg font-semibold mb-2">Chart Area</h3>
+          <div id="chart-placeholder" class="h-48 bg-gray-200 text-center flex items-center justify-center rounded">Chart will be here</div> <!-- Added rounded -->
         </div>
 
-        <div class="widget">
-          <h3>Recent Activity</h3>
-          <ul id="recent-activity-list">
+        <div class="border border-gray-200 p-4 mb-3 bg-white shadow-md rounded"> <!-- Removed class="widget", Added rounded -->
+          <h3 class="text-lg font-semibold mb-2">Recent Activity</h3>
+          <ul id="recent-activity-list" class="list-disc pl-5"> <!-- Basic list styling -->
             <li>Activity item 1</li>
             <li>Activity item 2</li>
           </ul>
